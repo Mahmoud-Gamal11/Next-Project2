@@ -1,0 +1,132 @@
+:root {
+  --primary: #003087; /* Deep Blue for primary */
+  --secondary: #0d1a26; /* Darker Blue for depth */
+  --accent: #00b7eb; /* Bright Cyan for accents */
+  --text: #e6f0fa; /* Light Blue-White for text */
+  --background: #0a1a2f; /* Dark Blue-Gray background */
+  --card-bg: rgba(0, 48, 135, 0.15); /* Semi-transparent based on primary */
+  --shadow: rgba(0, 0, 0, 0.5);
+  --glow: #00b7eb; /* Cyan glow for effects */
+}
+
+body {
+  background: var(--background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  color: var(--text);
+}
+
+/* container */
+.auth-container {
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+}
+
+/* box style */
+.auth-box {
+  background: var(--card-bg);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadow);
+  animation: fadeSlideUp 0.8s ease;
+  backdrop-filter: blur(8px);
+}
+
+.auth-box h3 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--accent);
+}
+
+/* inputs */
+.form-control,
+.form-select {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: var(--secondary);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Placeholder Text */
+.form-control::placeholder,
+.form-select::placeholder {
+  color: rgba(230, 240, 250, 0.7);
+}
+
+/* Focus State */
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 4px rgba(0,183,235,0.25);
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* buttons */
+.btn-custom {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+  color: var(--text) !important;
+  transition: all 0.3s ease;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: var(--secondary) !important;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,183,235,0.4);
+}
+
+/* links */
+.extra-links {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.extra-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.extra-links a:hover {
+  color: var(--text);
+}
+
+/* footer */
+footer {
+  background: var(--secondary);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: var(--text);
+}
+
+/* Fade Slide Animation */
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
