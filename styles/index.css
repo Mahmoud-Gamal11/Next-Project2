@@ -1,0 +1,294 @@
+body {
+  background-color: #0a1a2f; 
+  color: #e6f0fa;          
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; 
+}
+
+h1, h4, h5 {
+  transition: color 0.3s ease;
+}
+
+h1:hover, h4:hover, h5:hover {
+  color: #00b7eb; 
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* ===== Hero Section  ===== */
+.hero-section {
+  background: url("../images/index-images/indexBackground.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+  animation: fadeInOverlay 1.5s ease-in-out;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 30; 
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-sub {
+  color: #fff;
+  opacity: 0.95;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Button ===== */
+.btn-custom {
+  background-color: #003087; 
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #00b7eb; 
+  color: #0d1a26;           
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 183, 235, 0.6);
+}
+
+.btn-custom:hover::after {
+  width: 100%;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: rgba(0, 48, 135, 0.15);
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+  color: #e6f0fa;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  background-color: rgba(0, 48, 135, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 183, 235, 0.3);
+}
+
+.feature-icon {
+  font-size: 2.75rem;
+  line-height: 1;
+  color: #00b7eb;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* ===== Hero Logo ===== */
+.hero-logo {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0d1a26; 
+  color: #e6f0fa;
+  font-size: 14px;
+  border-top: 2px solid #003087;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body {
+  background-color: #0a1a2f; 
+  color: #e6f0fa;          
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; 
+}
+
+h1, h4, h5 {
+  transition: color 0.3s ease;
+}
+
+h1:hover, h4:hover, h5:hover {
+  color: #00b7eb; 
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/* ===== Hero Section  ===== */
+.hero-section {
+  background: url("../images/index-images/indexBackground.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 1;
+  animation: fadeInOverlay 1.5s ease-in-out;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 30; 
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-sub {
+  color: #fff;
+  opacity: 0.95;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ===== Button ===== */
+.btn-custom {
+  background-color: #003087; 
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #00b7eb; 
+  color: #0d1a26;           
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 183, 235, 0.6);
+}
+
+.btn-custom:hover::after {
+  width: 100%;
+}
+
+/* ===== Cards ===== */
+.card {
+  background-color: rgba(0, 48, 135, 0.15);
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+  color: #e6f0fa;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  background-color: rgba(0, 48, 135, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 183, 235, 0.3);
+}
+
+.feature-icon {
+  font-size: 2.75rem;
+  line-height: 1;
+  color: #00b7eb;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* ===== Hero Logo ===== */
+.hero-logo {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #0d1a26; 
+  color: #e6f0fa;
+  font-size: 14px;
+  border-top: 2px solid #003087;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
