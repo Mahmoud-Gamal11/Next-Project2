@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/user-management.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../images/user-management/2995350.png" alt="EAS Logo" class="logo-img">
+                <span class="logo-text">EAS</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="../Pages/home.html">Home</a></li>
+                <li><a href="../Pages/dashboard.html">Dashboard</a></li>
+                <li><a href="../Pages/reports.html">Reports</a></li>
+                <li><a href="../Pages/User Management.html" class="active">User Management</a></li>
+                <li><a href="../Pages/login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h2>
+                <span class="letter">U</span>
+                <span class="letter">s</span>
+                <span class="letter">e</span>
+                <span class="letter">r</span>
+                <span class="letter">&nbsp;</span>
+                <span class="letter">M</span>
+                <span class="letter">a</span>
+                <span class="letter">n</span>
+                <span class="letter">a</span>
+                <span class="letter">g</span>
+                <span class="letter">e</span>
+                <span class="letter">m</span>
+                <span class="letter">e</span>
+                <span class="letter">n</span>
+                <span class="letter">t</span>
+            </h2>
+            <p>Effortlessly manage your team's users with our intuitive and secure platform.</p>
+        </div>
+    </header>
+    <div id="notification" class="notification hidden"></div>
+    <section id="user-management">
+        <h2>Manage Users</h2>
+        <form id="add-user-form" class="space-y-4 mb-6">
+            <select id="add-role" required>
+                <option value="employee">Employee</option>
+                <option value="manager">Manager</option>
+                <option value="admin">Admin</option>
+                <option value="super_admin">Super Admin</option>
+            </select>
+            <input type="email" id="add-email" placeholder="Enter User Email" required>
+            <input type="password" id="add-password" placeholder="Set User Password" required>
+            <input type="text" id="add-dept" placeholder="Enter Department (Optional)">
+            <button type="submit">Add User</button>
+        </form>
+        <table>
+            <thead>
+                <tr class="table-header">
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="users-table"></tbody>
+        </table>
+        <input type="file" id="csv-file-input" accept=".csv" style="display: none;">
+        <button onclick="document.getElementById('csv-file-input').click()" class="bulk-import-btn">Bulk Import Users from CSV</button>
+    </section>
+    <div id="edit-user-modal" class="modal">
+        <div class="modal-content">
+            <h3>Edit User</h3>
+            <form id="edit-user-form">
+                <input type="email" id="edit-email" disabled>
+                <select id="edit-role" required>
+                    <option value="employee">Employee</option>
+                    <option value="manager">Manager</option>
+                    <option value="admin">Admin</option>
+                    <option value="super_admin">Super Admin</option>
+                </select>
+                <input type="text" id="edit-dept" placeholder="Enter Department (Optional)">
+                <div class="btn-container">
+                    <button type="submit">Save</button>
+                    <button type="button" class="btn-cancel" onclick="closeEditModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../scripts/user-management.js"></script>
+</body>
+</html>
