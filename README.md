@@ -1,8 +1,8 @@
-# Enoloyee Attendance 
+# Employee Attendance 
 
 
 
-**Enoloyee Attendance** is a modern, web-based employee attendance tracking system designed to streamline workforce management with real-time monitoring, advanced analytics, and seamless HR integrations. Built with a responsive and user-friendly interface, it supports businesses of all sizes with features like geolocation-based check-ins, vacation and complaint management, and customizable reporting.
+**Employee Attendance** is a modern, web-based employee attendance tracking system designed to streamline workforce management with real-time monitoring, advanced analytics, and seamless HR integrations. Built with a responsive and user-friendly interface, it supports businesses of all sizes with features like geolocation-based check-ins, vacation and complaint management, and customizable reporting.
 
 ## Table of Contents
 - [Features](#features)
