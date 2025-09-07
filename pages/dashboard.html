@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../images/dashboard-images/navbar-logo.jpg" alt="EAS Logo" class="logo-img">
+                <span class="logo-text">EAS</span>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="../Pages/home.html">Home</a></li>
+                <li><a href="../Pages/dashboard.html">Dashboard</a></li>
+                <li><a href="../Pages/reports.html">Reports</a></li>
+                <li><a href="../Pages/User Management.html" class="active">User Management</a></li>
+                <li><a href="../Pages/login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="nav.js"></script>
+</body>
+</html>
+
+   
+    <div class="container">
+        <h1>Employee Attendance Dashboard</h1>
+        <div class="analytics" id="analytics">
+            <!-- Analytics cards will be rendered here -->
+        </div>
+        <div class="actions">
+            <input type="text" id="employeeName" placeholder="Enter your name" />
+            <button id="checkInBtn">Check In</button>
+            <button id="checkOutBtn" disabled>Check Out</button>
+        </div>
+        <div style="overflow-x:auto;">
+            <table class="attendance-table" id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Check In</th>
+                        <th>Status</th>
+                        <th>Check Out</th>
+                        <th>Work Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendance records will be rendered here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+
+</html>
