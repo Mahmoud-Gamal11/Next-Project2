@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../images/home-images/logo.png" alt="EAS Logo" class="logo-img">
+                <span class="logo-text">EAS</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul>
+                <li><a href="../Pages/home.html">Home</a></li>
+                <li><a href="../Pages/dashboard.html">Dashboard</a></li>
+                <li><a href="../Pages/User Management.html">User Management</a></li>
+                <li><a href="../Pages/login.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1 id="animated-header">Employee Attendance System</h1>
+            <p>Elevate your team's efficiency with our state-of-the-art attendance platform – seamless, powerful, and
+                elegant.</p>
+            <button class="cta-button" onclick="clicked()">Record Attendance Now</button>
+        </div>
+    </header>
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <p>"This platform transformed our HR processes, making attendance tracking effortless and reliable."</p>
+                <h4>Jane Doe, HR Manager</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"The intuitive design and robust reporting tools saved our team countless hours."</p>
+                <h4>John Smith, Team Lead</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Seamless integration with our existing systems – a must-have for any organization."</p>
+                <h4>Alex Johnson, Operations Director</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Customizable and user-friendly, perfect for scaling our growing business."</p>
+                <h4>Sarah Lee, CEO</h4>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section>
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Instant Recording</h3>
+            <p>Log attendance instantly with one-click precision, streamlining your workflow.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Comprehensive Reports</h3>
+            <p>Unlock actionable insights with detailed, accurate attendance analytics.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🖥️</div>
+            <h3>User-Friendly Interface</h3>
+            <p>A sophisticated yet intuitive design that empowers every user.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Employee Attendance System. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>
