@@ -1,119 +1,180 @@
+/*Color Palette*/
 :root {
-  --primary: #003087; /* Deep Blue for primary */
-  --secondary: #0d1a26; /* Darker Blue for depth */
-  --accent: #00b7eb; /* Bright Cyan for accents */
-  --text: #e6f0fa; /* Light Blue-White for text */
-  --background: #0a1a2f; /* Dark Blue-Gray background */
-  --card-bg: rgba(0, 48, 135, 0.15); /* Semi-transparent based on primary */
-  --shadow: rgba(0, 0, 0, 0.5);
-  --glow: #00b7eb; /* Cyan glow for effects */
+  --primary: #5e72e4;
+  --secondary: #2d3f54;
+  --accent: #2acaea;
+  --text: #ffffff;
+  --background-start: #0a192f;
+  --background-end: #1e3a6a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --shadow: rgba(0, 0, 0, 0.7);
+  --glow: #2acaea;
 }
 
+/*Global Styles*/
 body {
-  background: var(--background);
+  /* Gradient background for the body */
+  background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden; /* Prevents scrollbars from background animation */
   color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
-/* container */
+/*Background Animation*/
+.background-spheres {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Places the animation behind other content */
+}
+
+.sphere {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(42, 202, 234, 0.2);
+  animation: animateSphere 25s linear infinite;
+  bottom: -150px;
+  border-radius: 50%;
+  filter: blur(8px);
+}
+
+/* Specific sphere properties for varied animation */
+.sphere:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.sphere:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.sphere:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.sphere:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.sphere:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+.sphere:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+.sphere:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+.sphere:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+.sphere:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+.sphere:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 11s; }
+
+/* Keyframes for sphere animation */
+@keyframes animateSphere {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; }
+  100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
+}
+
+/*Auth Box Layout*/
 .auth-container {
   position: relative;
   max-width: 450px;
   width: 100%;
   margin: auto;
+  padding: 20px;
+  z-index: 10;
 }
 
-/* box style */
 .auth-box {
   background: var(--card-bg);
-  padding: 35px;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px var(--shadow);
-  animation: fadeSlideUp 0.8s ease;
-  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1.2s ease-out; /* Fade-in animation on load */
 }
 
 .auth-box h3 {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: var(--accent);
+  text-shadow: 0 0 5px var(--glow);
 }
 
-/* inputs */
+/*Form Inputs*/
 .form-control,
 .form-select {
-  padding: 12px 14px;
+  padding: 15px;
   font-size: 1rem;
-  border-radius: 8px;
-  background: var(--secondary);
+  border-radius: 10px;
+  background: rgba(45, 63, 84, 0.7);
   color: var(--text);
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
 }
 
-/* Placeholder Text */
 .form-control::placeholder,
 .form-select::placeholder {
-  color: rgba(230, 240, 250, 0.7);
+  color: rgba(255, 255, 255, 0.6);
 }
 
-/* Focus State */
 .form-control:focus,
 .form-select:focus {
-  box-shadow: 0 0 0 4px rgba(0,183,235,0.25);
+  box-shadow: 0 0 0 5px rgba(42, 202, 234, 0.3);
   border-color: var(--accent);
   outline: none;
+  background: var(--secondary);
 }
 
-/* buttons */
+/* Custom Button*/
 .btn-custom {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   border: none;
-  padding: 12px;
+  padding: 15px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100%;
   color: var(--text) !important;
-  transition: all 0.3s ease;
-}
-.btn-custom:hover,
-.btn-custom:focus {
-  background: linear-gradient(135deg, var(--accent), var(--primary));
-  color: var(--secondary) !important;
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,183,235,0.4);
+  transition: all 0.4s ease;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* links */
+.btn-custom:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(42, 202, 234, 0.5);
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+}
+
+.btn-custom:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*Links and Footer*/
 .extra-links {
   text-align: center;
-  margin-top: 15px;
-  font-size: 0.9rem;
+  margin-top: 20px;
+  font-size: 0.95rem;
   color: var(--text);
 }
 
 .extra-links a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-.extra-links a:hover {
-  color: var(--text);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* footer */
+.extra-links a:hover {
+  color: var(--text);
+  text-shadow: 0 0 8px var(--glow);
+}
+
 footer {
-  background: var(--secondary);
+  background: rgba(45, 63, 84, 0.5);
   padding: 15px 0;
   text-align: center;
   font-size: 0.9rem;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1.5s ease-out;
+  z-index: 10;
 }
 
 footer a {
@@ -121,12 +182,19 @@ footer a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 footer a:hover {
   color: var(--text);
 }
 
-/* Fade Slide Animation */
-@keyframes fadeSlideUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+/*Animations*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
