@@ -1,6 +1,6 @@
 
         function clicked() {
-            window.location.href = "../Pages/dashboard.html";
+            window.location.href = "../pages/dashboard.html";
         }
 
         document.addEventListener('DOMContentLoaded', function() {
