@@ -10,41 +10,44 @@
 
 <body>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="nav.css">
-</head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="../images/dashboard-images/navbar-logo.jpg" alt="EAS Logo" class="logo-img">
-                <span class="logo-text">EAS</span>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="../images/dashboard-images/navbar-logo.jpg" alt="EAS Logo" class="logo-img">
+                    <span class="logo-text">EAS</span>
+                </div>
+
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="../pages/home.html">Home</a></li>
+                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="../pages/reports.html">Reports</a></li>
+                    <li><a href="../pages/user-managmet.html" class="active">User Management</a></li>
+                    <li><a href="../pages/login.html" class="logout">Logout</a></li>
+                </ul>
             </div>
+        </nav>
+        <script src="nav.js"></script>
+    </body>
 
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul>
-                <li><a href="../Pages/home.html">Home</a></li>
-                <li><a href="../Pages/dashboard.html">Dashboard</a></li>
-                <li><a href="../Pages/reports.html">Reports</a></li>
-                <li><a href="../pages/user-managmet.html" class="active">User Management</a></li>
-                <li><a href="../Pages/login.html" class="logout">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
-    <script src="nav.js"></script>
-</body>
-</html>
+    </html>
 
-   
+
     <div class="container">
         <h1>Employee Attendance Dashboard</h1>
         <div class="analytics" id="analytics">
